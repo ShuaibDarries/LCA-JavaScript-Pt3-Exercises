@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechConnect - Developer Community Hub</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <base target="_blank" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-4 mb-4 shadow-sm">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h1 class="h2 mb-0">
+              <i class="bi bi-code-square me-2"></i>
+              TechConnect Developer Hub
+            </h1>
+            <p class="mb-0 opacity-75">Internal Developer Directory</p>
+          </div>
+          <div class="col-md-4 text-md-end mt-3 mt-md-0">
+            <div class="developer-count-badge">
+              <span class="badge bg-white text-primary fs-6 px-3 py-2">
+                <i class="bi bi-people-fill me-1"></i>
+                <span id="developer-count">15</span> Developers
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container pb-5">
+      <!-- Controls Section -->
+      <section class="controls-section mb-4" aria-label="Directory Controls">
+        <div class="row g-3 align-items-end">
+          <!-- Search Bar -->
+          <div class="col-lg-5 col-md-6">
+            <label for="search-input" class="form-label fw-semibold">
+              <i class="bi bi-search me-1"></i>Search Directory
+            </label>
+            <div class="input-group">
+              <span class="input-group-text bg-white">
+                <i class="bi bi-search"></i>
+              </span>
+              <input
+                type="text"
+                id="search-input"
+                class="form-control"
+                placeholder="Search by name, role, or skill..."
+                aria-label="Search developers by name, role, or skill"
+              />
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="clear-search"
+                aria-label="Clear search"
+              >
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- View Toggle -->
+          <div class="col-lg-3 col-md-6">
+            <label class="form-label fw-semibold d-block">
+              <i class="bi bi-grid-3x3-gap me-1"></i>View Layout
+            </label>
+            <div class="btn-group w-100" role="group" aria-label="View toggle">
+              <button
+                type="button"
+                class="btn btn-outline-primary active"
+                id="view-card"
+                aria-pressed="true"
+              >
+                <i class="bi bi-grid-fill me-1"></i>Cards
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                id="view-table"
+                aria-pressed="false"
+              >
+                <i class="bi bi-table me-1"></i>Table
+              </button>
+            </div>
+          </div>
+
+          <!-- Add Developer Button -->
+          <div class="col-lg-4 col-md-12">
+            <button
+              class="btn btn-success w-100"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#add-developer-form"
+              aria-expanded="false"
+              aria-controls="add-developer-form"
+            >
+              <i class="bi bi-person-plus-fill me-2"></i>Add New Developer
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Add Developer Form (Collapsible) -->
+      <section class="mb-4" aria-label="Add Developer Form">
+        <div class="collapse" id="add-developer-form">
+          <div class="card border-success shadow-sm">
+            <div class="card-header bg-success text-white">
+              <h2 class="h5 mb-0">
+                <i class="bi bi-person-plus me-2"></i>Add New Developer
+              </h2>
+            </div>
+            <div class="card-body">
+              <form id="developer-form" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="dev-name" class="form-label">Full Name *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="dev-name"
+                      required
+                      minlength="2"
+                      maxlength="50"
+                      pattern="[A-Za-z\s]+"
+                      placeholder="e.g., John Doe"
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid name (2-50 characters, letters only).
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="dev-role" class="form-label">Role *</label>
+                    <select class="form-select" id="dev-role" required>
+                      <option value="" selected disabled>
+                        Select a role...
+                      </option>
+                      <option value="Frontend Developer">
+                        Frontend Developer
+                      </option>
+                      <option value="Backend Developer">
+                        Backend Developer
+                      </option>
+                      <option value="Full Stack Developer">
+                        Full Stack Developer
+                      </option>
+                      <option value="Mobile Developer">Mobile Developer</option>
+                      <option value="DevOps Engineer">DevOps Engineer</option>
+                      <option value="UI/UX Designer">UI/UX Designer</option>
+                      <option value="Data Scientist">Data Scientist</option>
+                      <option value="QA Engineer">QA Engineer</option>
+                      <option value="Cloud Architect">Cloud Architect</option>
+                      <option value="Security Engineer">
+                        Security Engineer
+                      </option>
+                      <option value="AI Engineer">AI Engineer</option>
+                      <option value="Blockchain Developer">
+                        Blockchain Developer
+                      </option>
+                    </select>
+                    <div class="invalid-feedback">Please select a role.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="dev-email" class="form-label">Email *</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="dev-email"
+                      required
+                      placeholder="e.g., developer@techconnect.africa"
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="dev-location" class="form-label"
+                      >Location *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="dev-location"
+                      required
+                      minlength="2"
+                      placeholder="e.g., Lagos, Nigeria"
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid location.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="dev-experience" class="form-label"
+                      >Years of Experience *</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="dev-experience"
+                      required
+                      min="0"
+                      max="50"
+                      placeholder="e.g., 3"
+                    />
+                    <div class="invalid-feedback">
+                      Please enter years of experience (0-50).
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="dev-skills" class="form-label"
+                      >Skills * (comma-separated)</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="dev-skills"
+                      required
+                      minlength="2"
+                      placeholder="e.g., JavaScript, React, Node.js"
+                    />
+                    <div class="invalid-feedback">
+                      Please enter at least one skill.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="dev-available"
+                      />
+                      <label class="form-check-label" for="dev-available">
+                        Available for Hire
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-success">
+                      <i class="bi bi-check-circle me-2"></i>Add Developer
+                    </button>
+                    <button type="reset" class="btn btn-outline-secondary ms-2">
+                      <i class="bi bi-arrow-counterclockwise me-2"></i>Reset
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results Info -->
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <p class="text-muted mb-0" id="results-info">
+          Showing all 15 developers
+        </p>
+        <div id="active-filters" class="d-flex gap-2"></div>
+      </div>
+
+      <!-- Developer Directory Container -->
+      <section
+        id="directory-container"
+        class="developer-directory"
+        aria-label="Developer Directory"
+      >
+        <!-- Content rendered dynamically by JavaScript -->
+      </section>
+
+      <!-- No Results Message -->
+      <div id="no-results" class="text-center py-5 d-none">
+        <div class="mb-3">
+          <i class="bi bi-search display-1 text-muted"></i>
+        </div>
+        <h3 class="h4 text-muted">No developers found</h3>
+        <p class="text-muted">Try adjusting your search terms or filters.</p>
+        <button class="btn btn-outline-primary" id="reset-filters">
+          <i class="bi bi-arrow-counterclockwise me-2"></i>Clear Search
+        </button>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-light border-top py-4 mt-auto">
+      <div class="container text-center text-muted">
+        <p class="mb-0">
+          &copy; 2026 TechConnect (Pty) Ltd. Internal Developer Directory.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
