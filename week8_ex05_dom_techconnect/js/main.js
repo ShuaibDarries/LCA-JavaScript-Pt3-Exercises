@@ -1,8 +1,3 @@
-/**
- * TechConnect Developer Hub - Main JavaScript
- * Vanilla JavaScript, no frameworks
- */
-
 // ============================================
 // State Management
 // ============================================
