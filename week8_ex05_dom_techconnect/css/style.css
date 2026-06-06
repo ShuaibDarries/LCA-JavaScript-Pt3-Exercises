@@ -1,0 +1,440 @@
+/* ============================================
+   TechConnect Developer Hub - Custom Styles
+   Layered on top of Bootstrap 5
+   ============================================ */
+
+/* CSS Variables for consistent theming */
+:root {
+  --tc-primary: #0d6efd;
+  --tc-primary-dark: #0b5ed7;
+  --tc-success: #198754;
+  --tc-success-light: #d1e7dd;
+  --tc-warning: #ffc107;
+  --tc-danger: #dc3545;
+  --tc-light: #f8f9fa;
+  --tc-dark: #212529;
+  --tc-card-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --tc-card-hover-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --tc-transition: all 0.3s ease;
+  --tc-border-radius: 0.75rem;
+}
+
+/* Base Styles */
+body {
+  font-family:
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Enhancements */
+header {
+  background: linear-gradient(
+    135deg,
+    var(--tc-primary) 0%,
+    var(--tc-primary-dark) 100%
+  ) !important;
+}
+
+.developer-count-badge .badge {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+/* Controls Section */
+.controls-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--tc-border-radius);
+  box-shadow: var(--tc-card-shadow);
+}
+
+/* Search Input Styling */
+#search-input {
+  border-left: 0;
+}
+
+#search-input:focus {
+  box-shadow: none;
+  border-color: #dee2e6;
+}
+
+.input-group:focus-within {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  border-radius: 0.375rem;
+}
+
+/* View Toggle Buttons */
+.btn-group .btn {
+  transition: var(--tc-transition);
+}
+
+.btn-group .btn.active {
+  background-color: var(--tc-primary);
+  border-color: var(--tc-primary);
+  color: white;
+}
+
+/* Card View Styles */
+.developer-card {
+  background: white;
+  border-radius: var(--tc-border-radius);
+  box-shadow: var(--tc-card-shadow);
+  transition: var(--tc-transition);
+  overflow: hidden;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.developer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--tc-card-hover-shadow);
+}
+
+.card-image-wrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.developer-card:hover .card-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.card-badge-overlay {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+}
+
+.badge-hire {
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  color: #212529;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-hire i {
+  margin-right: 4px;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-weight: 700;
+  color: var(--tc-dark);
+  margin-bottom: 0.25rem;
+}
+
+.card-role {
+  color: var(--tc-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6c757d;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-meta i {
+  color: var(--tc-primary);
+  width: 16px;
+}
+
+.card-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill-tag {
+  background-color: #e9ecef;
+  color: #495057;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: var(--tc-transition);
+}
+
+.skill-tag:hover {
+  background-color: var(--tc-primary);
+  color: white;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.card-actions .btn {
+  flex: 1;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+}
+
+/* Table View Styles */
+.table-view-container {
+  background: white;
+  border-radius: var(--tc-border-radius);
+  box-shadow: var(--tc-card-shadow);
+  overflow: hidden;
+}
+
+.table-view-container .table {
+  margin-bottom: 0;
+}
+
+.table-view-container thead {
+  background-color: #f8f9fa;
+}
+
+.table-view-container th {
+  font-weight: 700;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  padding: 1rem;
+  white-space: nowrap;
+}
+
+.table-view-container td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.table-view-container tbody tr {
+  transition: var(--tc-transition);
+}
+
+.table-view-container tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.table-developer-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e9ecef;
+}
+
+.table-developer-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.table-developer-name {
+  font-weight: 600;
+  color: var(--tc-dark);
+}
+
+.table-developer-role {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.table-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.table-skills .skill-tag {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+
+.table-actions .btn {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* Toggle Switch Styling */
+.hire-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hire-toggle-wrapper .form-check-input {
+  width: 2.5rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+.hire-toggle-wrapper .form-check-input:checked {
+  background-color: var(--tc-success);
+  border-color: var(--tc-success);
+}
+
+/* Form Styling */
+#add-developer-form .card {
+  border-width: 2px;
+}
+
+#developer-form .form-control:focus,
+#developer-form .form-select:focus {
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+  border-color: var(--tc-success);
+}
+
+/* No Results Section */
+#no-results {
+  background: white;
+  border-radius: var(--tc-border-radius);
+  box-shadow: var(--tc-card-shadow);
+  padding: 3rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card-image-wrapper {
+    height: 160px;
+  }
+
+  .controls-section {
+    padding: 1rem;
+  }
+
+  .table-view-container {
+    font-size: 0.875rem;
+  }
+
+  .table-view-container th,
+  .table-view-container td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .table-developer-img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .card-actions .btn {
+    width: 100%;
+  }
+
+  .table-actions {
+    flex-direction: column;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .controls-section,
+  .card-actions,
+  .table-actions,
+  footer,
+  #add-developer-form {
+    display: none !important;
+  }
+
+  .developer-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #dee2e6;
+  }
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--tc-primary);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "Amahle Dlamini",
+    "role": "Frontend Developer",
+    "skills": ["HTML", "CSS", "JavaScript", "React", "Figma"],
+    "avatar": "https://placehold.co/100x100/4F81BD/ffffff",
+    "availableForHire": true,
+    "location": "Cape Town"
+  },
+  {
+    "id": 2,
+    "name": "Sipho Nkosi",
+    "role": "Backend Developer",
+    "skills": ["Node.js", "Express", "MongoDB", "SQL"],
+    "avatar": "https://placehold.co/100x100/9BBB59/ffffff",
+    "availableForHire": false,
+    "location": "Johannesburg"
+  },
+  {
+    "id": 3,
+    "name": "Lerato Mokoena",
+    "role": "Full Stack Developer",
+    "skills": ["React", "Node.js", "PostgreSQL", "Docker", "Git"],
+    "avatar": "https://placehold.co/100x100/C0504D/ffffff",
+    "availableForHire": true,
+    "location": "Pretoria"
+  },
+  {
+    "id": 4,
+    "name": "Thabo Sithole",
+    "role": "UI/UX Designer",
+    "skills": ["Figma", "Adobe XD", "User Research", "Prototyping"],
+    "avatar": "https://placehold.co/100x100/F79646/ffffff",
+    "availableForHire": false,
+    "location": "Durban"
+  },
+  {
+    "id": 5,
+    "name": "Nomvula Zulu",
+    "role": "DevOps Engineer",
+    "skills": ["Docker", "Kubernetes", "CI/CD", "AWS", "Linux"],
+    "avatar": "https://placehold.co/100x100/8064A2/ffffff",
+    "availableForHire": true,
+    "location": "Cape Town"
+  },
+  {
+    "id": 6,
+    "name": "Kagiso Motsepe",
+    "role": "Frontend Developer",
+    "skills": ["Vue.js", "CSS", "TypeScript", "Tailwind CSS"],
+    "avatar": "https://placehold.co/100x100/17375E/ffffff",
+    "availableForHire": true,
+    "location": "Johannesburg"
+  },
+  {
+    "id": 7,
+    "name": "Zanele Mthembu",
+    "role": "Backend Developer",
+    "skills": ["Python", "Django", "REST APIs", "MySQL", "Redis"],
+    "avatar": "https://placehold.co/100x100/538135/ffffff",
+    "availableForHire": false,
+    "location": "Port Elizabeth"
+  },
+  {
+    "id": 8,
+    "name": "Bongani Cele",
+    "role": "Full Stack Developer",
+    "skills": ["Angular", "Java", "Spring Boot", "MongoDB"],
+    "avatar": "https://placehold.co/100x100/833C00/ffffff",
+    "availableForHire": true,
+    "location": "Durban"
+  },
+  {
+    "id": 9,
+    "name": "Precious Khumalo",
+    "role": "UI/UX Designer",
+    "skills": ["Sketch", "Figma", "Wireframing", "Accessibility", "CSS"],
+    "avatar": "https://placehold.co/100x100/31849B/ffffff",
+    "availableForHire": false,
+    "location": "Pretoria"
+  },
+  {
+    "id": 10,
+    "name": "Mandla Ntuli",
+    "role": "DevOps Engineer",
+    "skills": ["Terraform", "Azure", "Bash", "Ansible"],
+    "avatar": "https://placehold.co/100x100/7F7F7F/ffffff",
+    "availableForHire": true,
+    "location": "Cape Town"
+  },
+  {
+    "id": 11,
+    "name": "Ayanda Mkhize",
+    "role": "Frontend Developer",
+    "skills": ["React", "Redux", "JavaScript", "SASS"],
+    "avatar": "https://placehold.co/100x100/1F3864/ffffff",
+    "availableForHire": false,
+    "location": "Bloemfontein"
+  },
+  {
+    "id": 12,
+    "name": "Thandeka Ndlovu",
+    "role": "Backend Developer",
+    "skills": ["Go", "gRPC", "PostgreSQL", "Docker", "Kafka"],
+    "avatar": "https://placehold.co/100x100/375623/ffffff",
+    "availableForHire": true,
+    "location": "Johannesburg"
+  },
+  {
+    "id": 13,
+    "name": "Lwazi Hadebe",
+    "role": "Full Stack Developer",
+    "skills": ["Next.js", "GraphQL", "Prisma", "TypeScript", "Vercel"],
+    "avatar": "https://placehold.co/100x100/632523/ffffff",
+    "availableForHire": true,
+    "location": "Cape Town"
+  },
+  {
+    "id": 14,
+    "name": "Nandi Shabalala",
+    "role": "UI/UX Designer",
+    "skills": ["User Testing", "Figma", "InVision", "Design Systems"],
+    "avatar": "https://placehold.co/100x100/984807/ffffff",
+    "availableForHire": false,
+    "location": "Durban"
+  },
+  {
+    "id": 15,
+    "name": "Sibusiso Mahlangu",
+    "role": "DevOps Engineer",
+    "skills": ["Jenkins", "GitHub Actions", "GCP", "Prometheus", "Grafana"],
+    "avatar": "https://placehold.co/100x100/3F3151/ffffff",
+    "availableForHire": true,
+    "location": "Pretoria"
+  }
+]
